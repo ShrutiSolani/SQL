@@ -9,7 +9,7 @@ Output the city and number of orders.
 
 ## Solution
 ```
-SELECT city, COUNT(*) AS total_orders
+SELECT city, COUNT(order_id) AS total_orders
 FROM users INNER JOIN trades
 ON users.user_id = trades.user_id
 WHERE status LIKE 'Completed'
